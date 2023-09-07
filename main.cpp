@@ -70,12 +70,10 @@ int main()
     int x,y;
 
 
-    while (1){
+    while (cin >> x >> y){
 
 //        cout << "X :" << x << "  Y: "<<y<<endl;
-        cin >> x >> y;
-        if (cin.eof()) break;
-        int idx;
+
 
         if (arr_x.back()<x){
             cout << "out" <<endl;

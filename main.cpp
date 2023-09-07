@@ -6,6 +6,8 @@
 
 using namespace std;
 
+#define DEBUG 0
+
 
 bool cmp(int a, int b){
 
@@ -55,25 +57,25 @@ int main()
     arr_x.insert(arr_x.begin(),0);
     arr_y.push_back(0);
 
+#if DEBUG
+    cout << "X" <<endl;
+    for (auto i:arr_x){
+        cout << i << endl;
+    }
 
-//    cout << "X" <<endl;
-//    for (auto i:arr_x){
-//        cout << i << endl;
-//    }
-//
-//    cout << "Y" <<endl;
-//    for (auto r:arr_y){
-//        cout << r << endl;
-//    }
-
+    cout << "Y" <<endl;
+    for (auto r:arr_y){
+        cout << r << endl;
+    }
+#endif
 
     int x,y;
-
+    int idx;
 
     while (cin >> x >> y){
-
-//        cout << "X :" << x << "  Y: "<<y<<endl;
-
+#if DEBUG
+        cout << "X :" << x << "  Y: "<<y<<endl;
+#endif
 
         if (arr_x.back()<x){
             cout << "out" <<endl;
@@ -85,9 +87,9 @@ int main()
                 break;
             }
         }
-
-//        cout << "IDX = " << idx <<endl;
-
+#if DEBUG
+        cout << "IDX = " << idx <<endl;
+#endif
 
 
 
